@@ -21,7 +21,7 @@ require XOOPS_ROOT_PATH.'/include/cp_functions.php' ;
 $langmanpath = XOOPS_TRUST_PATH.'/libs/altsys/class/D3LanguageManager.class.php' ;
 if( ! file_exists( $langmanpath ) ) die( 'install the latest altsys' ) ;
 require_once( $langmanpath ) ;
-$langman =& D3LanguageManager::getInstance() ;
+$langman = D3LanguageManager::getInstance() ;
 
 // sanitizer class for input validation vulnerabilities
 require_once dirname(__FILE__).'/class/sanitizer.class.php';

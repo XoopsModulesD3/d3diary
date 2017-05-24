@@ -14,7 +14,7 @@ define ('_D3DIARY_EDITTAG_DELETE', '1' ) ;
 define ('_D3DIARY_EDITTAG_REV', '2' ) ;
 define ('_D3DIARY_EDITTAG_ADD', '3' ) ;
 
-$tag =& D3diaryTag::getInstance();
+$tag = D3diaryTag::getInstance();
 $d3dConf = & D3diaryConf::getInstance($mydirname);
 $func =& $d3dConf->func ;
 $mPerm =& $d3dConf->mPerm ;

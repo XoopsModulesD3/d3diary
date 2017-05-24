@@ -5,9 +5,9 @@ include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/tag.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$diary =& D3diaryDiary::getInstance();
-$photoObj =& D3diaryPhoto::getInstance();
-$tag =& D3diaryTag::getInstance();
+$diary = D3diaryDiary::getInstance();
+$photoObj = D3diaryPhoto::getInstance();
+$tag = D3diaryTag::getInstance();
 
 $d3dConf = & D3diaryConf::getInstance($mydirname);
 $func =& $d3dConf->func ;

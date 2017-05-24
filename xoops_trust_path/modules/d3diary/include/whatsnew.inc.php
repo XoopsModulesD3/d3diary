@@ -29,7 +29,7 @@ if( ! function_exists( 'd3diary_new_base' ) ) {
 		$d3dConf = D3diaryConf::getInstance($mydirname, 0, "whatsnew");
 		$func =& $d3dConf->func ;
 		$myts =& $d3dConf->myts;
-		$photo =& D3diaryPhoto::getInstance();
+		$photo = D3diaryPhoto::getInstance();
 		$uid = $d3dConf->uid;
 		//$req_uid = $d3dConf->req_uid; // overrided by d3dConf
 		$req_uid = 0; // overrided by d3dConf

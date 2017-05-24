@@ -48,7 +48,7 @@ function smarty_function_d3comment($params, &$smarty)
 	$m_params['external_trustdirname'] = $mytrustdirname ;
 
 	if( class_exists( $classname ) ) {
-		$obj =& D3commentObj::getInstance ( $m_params ) ;
+		$obj = D3commentObj::getInstance ( $m_params ) ;
 		$obj->d3comObj->setSmarty( $smarty ) ;
 		switch( $params['mode'] ) {
 			case 'count' :

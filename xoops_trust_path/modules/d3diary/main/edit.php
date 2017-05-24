@@ -11,10 +11,10 @@ include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/tag.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$diary =& D3diaryDiary::getInstance();
-$category =& D3diaryCategory::getInstance();
-$photoObj =& D3diaryPhoto::getInstance();
-$tag =& D3diaryTag::getInstance();
+$diary = D3diaryDiary::getInstance();
+$category = D3diaryCategory::getInstance();
+$photoObj = D3diaryPhoto::getInstance();
+$tag = D3diaryTag::getInstance();
 
 require_once XOOPS_TRUST_PATH.'/libs/altsys/class/D3NotificationHandler.class.php' ;
 
@@ -34,7 +34,7 @@ define ('_D3DIARY_PROCMODE_PHOTOROTATE', '10' ) ;
 
 $myname = "edit.php";
 
-$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "edit");
+$d3dConf = D3diaryConf::getInstance($mydirname, 0, "edit");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mPerm =& $d3dConf->mPerm ;
@@ -359,7 +359,7 @@ switch ( $eparam['mode'] ) {
 		$users2notify = $mPerm->get_users_can_read_entry( $openarea, $yd_data['openarea'], $openarea_cat, 
 							$diary->vgids, $diary->vpids, $vgids_cat, $vpids_cat );
 
-		$not_handler =& D3NotificationHandler::getInstance() ;
+		$not_handler = D3NotificationHandler::getInstance() ;
 		
 		$comment_tags = array( 'ENTRY_TITLE' => $yd_data['title'] , 'ENTRY_URI' => XOOPS_URL.'/modules/'.$mydirname.'/index.php?page=detail&req_uid='.$req_uid.'&bid='.$diary->bid ) ;
 		$not_handler->triggerEvent( $mydirname , 'd3diary' , 'global' , 0 , 'new_entry' , $comment_tags , $users2notify ) ;
@@ -445,7 +445,7 @@ switch ( $eparam['mode'] ) {
 			$users2notify = $mPerm->get_users_can_read_entry( $openarea, $openarea_entry, $openarea_cat, 
 						$diary->vgids, $diary->vpids, $vgids_cat, $vpids_cat );
 
-			$not_handler =& D3NotificationHandler::getInstance() ;
+			$not_handler = D3NotificationHandler::getInstance() ;
 			
 			$comment_tags = array( 'ENTRY_TITLE' => $diary->title , 'ENTRY_URI' => XOOPS_URL.'/modules/'.$mydirname.'/index.php?page=detail&req_uid='.$req_uid.'&bid='.$diary->bid ) ;
 			$not_handler->triggerEvent( $mydirname , 'd3diary' , 'global' , 0 , 'new_entry' , $comment_tags , $users2notify ) ;
@@ -1048,7 +1048,7 @@ function d3diary_showform($mydirname){
 	if( $eparam['is_prev']==1 ){
 		$yd_data['cid']=$func->getpost_param('cid');
 		if($yd_data['cid']>0){
-			$category =& D3diaryCategory::getInstance();
+			$category = D3diaryCategory::getInstance();
 			$category->uid = $diary->uid;
 			$category->cid = intval($yd_data['cid']);
 			$category->readdb($mydirname);

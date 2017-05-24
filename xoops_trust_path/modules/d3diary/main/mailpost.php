@@ -6,10 +6,10 @@ include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
 $myname = "mailpost.php";
 
-$diary =& D3diaryDiary::getInstance();
-$photo =& D3diaryPhoto::getInstance();
-$tag =& D3diaryTag::getInstance();
-$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "mailpost");
+$diary = D3diaryDiary::getInstance();
+$photo = D3diaryPhoto::getInstance();
+$tag = D3diaryTag::getInstance();
+$d3dConf = D3diaryConf::getInstance($mydirname, 0, "mailpost");
 $func =& $d3dConf->func ;
 
 $uid = $d3dConf->uid;

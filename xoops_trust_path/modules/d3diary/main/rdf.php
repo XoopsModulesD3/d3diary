@@ -5,8 +5,8 @@ error_reporting(0);
 include_once dirname( dirname(__FILE__) ).'/class/category.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$category =& D3diaryCategory::getInstance();
-$d3dConf =& D3diaryConf::getInstance($mydirname);
+$category = D3diaryCategory::getInstance();
+$d3dConf = D3diaryConf::getInstance($mydirname);
 $func =& $d3dConf->func ;
 $mod_config =& $d3dConf->mod_config ;
 $mPerm =& $d3dConf->mPerm ;

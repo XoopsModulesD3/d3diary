@@ -11,7 +11,7 @@ function '.$mydirname.'_notify_iteminfo( $category, $item_id )
 
    function d3diary_notify_base( $mydirname , $category , $item_id )
    {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$module =& $module_handler->getByDirname( $mydirname ) ;

@@ -13,7 +13,7 @@ public function __construct( $d3forum_dirname , $target_dirname , $target_trustd
 	$mydirname = $this->mydirname ;
 
 	require_once dirname(__FILE__).'/d3diaryConf.class.php';
-	$this->d3dConf =& D3diaryConf::getInstance($mydirname, 0, "d3comment");
+	$this->d3dConf = D3diaryConf::getInstance($mydirname, 0, "d3comment");
 	$this->mPerm =& $this->d3dConf->mPerm;
 	$this->func =& $this->d3dConf->func;
 	$this->mod_config =& $this->d3dConf->mod_config;
@@ -139,7 +139,7 @@ function onUpdate( $mode , $link_id , $forum_id , $topic_id , $post_id = 0 )
 	// Trigger Notification
 	$users2notify = $this->mPerm->get_users_can_read_entry( $openarea, $openarea_entry, $openarea_cat, 
 				$vgids, $vpids, $vgids_cat, $vpids_cat );
-	$not_handler =& D3NotificationHandler::getInstance() ;
+	$not_handler = D3NotificationHandler::getInstance() ;
 	
 	$comment_tags = array( 'ENTRY_TITLE' => $title , 'ENTRY_BLOGGER' => $notif_name , 'ENTRY_URI' => XOOPS_URL."/modules/".$mydirname."/index.php?page=detail&bid=".$link_id."&req_uid=".$uid."#comment" ) ;
 	$not_handler->triggerEvent( $this->mydirname , 'd3diary' , 'blogger' , $uid , 'new_comment' , $comment_tags , $users2notify ) ;
@@ -157,7 +157,7 @@ function validate_id( $link_id )
 	$link_id = intval( $link_id ) ;
 	$mydirname = $this->mydirname ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $count ) = $db->fetchRow( $db->query( "SELECT COUNT(*) FROM ".$db->prefix($mydirname."_diary")." WHERE bid='".$link_id."'" ) ) ;
 	if( $count <= 0 ) return false ;
@@ -206,7 +206,7 @@ function validate_users2notify( $link_id, $users2notify=array() )
 	$link_id = intval( $link_id ) ;
 	$mydirname = $this->mydirname ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $count ) = $db->fetchRow( $db->query( "SELECT COUNT(*) FROM ".$db->prefix($mydirname."_diary")." WHERE bid='".$link_id."'" ) ) ;
 	if( $count <= 0 ) return false ;

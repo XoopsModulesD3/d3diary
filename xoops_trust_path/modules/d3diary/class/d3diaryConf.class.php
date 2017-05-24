@@ -62,7 +62,7 @@ public function __construct($mydirname, $req_uid=0, $caller="")
 	
 	$this->start_time = (int)(microtime(true) * 1000);
 
-	$this->db =& Database::getInstance() ;
+	$this->db = Database::getInstance() ;
 	$this->mydirname = $mydirname;
 	$this->caller = $caller;
 	if (is_object( @$xoopsUser )){
@@ -96,7 +96,7 @@ public function __construct($mydirname, $req_uid=0, $caller="")
 		$langmanpath = XOOPS_TRUST_PATH.'/libs/altsys/class/D3LanguageManager.class.php' ;
 		if( ! file_exists( $langmanpath ) ) die( 'install the latest altsys' ) ;
 		require_once( $langmanpath ) ;
-		$langman =& D3LanguageManager::getInstance() ;
+		$langman = D3LanguageManager::getInstance() ;
 		$mytrustdirname =  basename( dirname( dirname( __FILE__ )) ) ;
 		$langman->read( 'blocks_each.php' , $this->mydirname , $mytrustdirname , false ) ;
 	}
@@ -134,7 +134,7 @@ public function __construct($mydirname, $req_uid=0, $caller="")
 		$perm_class = empty( $this->mod_config['permission_class'] ) ? 'd3diaryPermission' : 
 			preg_replace( '/[^0-9a-zA-Z_]/' , '' , $this->mod_config['permission_class'] ) ;
 
-		(method_exists('MyTextSanitizer', 'sGetInstance') and $this->myts =& MyTextSanitizer::sGetInstance()) || $this->myts =& MyTextSanitizer::getInstance();
+		(method_exists('MyTextSanitizer', 'sGetInstance') and $this->myts = MyTextSanitizer::sGetInstance()) || $this->myts = MyTextSanitizer::getInstance();
 
 		require_once dirname(__FILE__).'/'.$perm_class.'.class.php' ;
 		require_once dirname(__FILE__).'/groupperm.class.php' ;

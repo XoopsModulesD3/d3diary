@@ -8,10 +8,10 @@ include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/tag.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$category =& D3diaryCategory::getInstance();
-$photo =& D3diaryPhoto::getInstance();
-$tag =& D3diaryTag::getInstance();
-$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "diarylist");
+$category = D3diaryCategory::getInstance();
+$photo = D3diaryPhoto::getInstance();
+$tag = D3diaryTag::getInstance();
+$d3dConf = D3diaryConf::getInstance($mydirname, 0, "diarylist");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mPerm =& $d3dConf->mPerm ;

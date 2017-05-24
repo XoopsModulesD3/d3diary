@@ -2375,7 +2375,7 @@ function &get_d3com_object( $forum_dirname, $external_link_format )
 	@list( $params['external_dirname'] , $params['classname'] , $params['external_trustdirname'] ) 
 		= explode( '::' , $external_link_format ) ;
 
-	$obj =& d3diaryD3commentObj::getInstance ( $params ) ;
+	$obj = d3diaryD3commentObj::getInstance ( $params ) ;
 	
 	return $obj->d3comObj ;
 }

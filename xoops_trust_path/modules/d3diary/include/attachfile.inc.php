@@ -43,8 +43,8 @@ function attachfile_check_upload_permission_plugin( $target_id )
 	include_once $mytrustdirpath.'/class/category.class.php';
 	include_once $mytrustdirpath.'/class/d3diaryConf.class.php' ;
 	
-	$diary =& D3diaryDiary::getInstance();
-	$cat =& D3diaryCategory::getInstance();
+	$diary = D3diaryDiary::getInstance();
+	$cat = D3diaryCategory::getInstance();
 	
 	$diary->bid = $target_id ;
 	$diary->readdb($mydirname);

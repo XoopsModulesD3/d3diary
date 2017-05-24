@@ -5,7 +5,7 @@ if ( ! function_exists('d3diary_import_from_d3diary') ) {
 	{
 		include_once dirname(__FILE__).'/mytable.php' ;
 
-		$db =& Database::getInstance() ;
+		$db = Database::getInstance() ;
 		$import_mid = intval( $import_mid ) ;
 
 		$module_handler = & xoops_gethandler( 'module' ) ;
@@ -32,7 +32,7 @@ if ( ! function_exists('d3diary_import_from_d3diary') ) {
 if ( ! function_exists('d3diary_import_from_minidiary') ) {
 	function d3diary_import_from_minidiary( $mydirname , $import_mid )
 	{
-		$db =& Database::getInstance() ;
+		$db = Database::getInstance() ;
 		$import_mid = intval( $import_mid ) ;
 
 		// get name of `contents` table 
@@ -98,7 +98,7 @@ if ( ! function_exists('d3diary_import_from_minidiary') ) {
 if ( ! function_exists('d3diary_import_from_d3blog') ) {
 	function d3diary_import_from_d3blog( $mydirname , $import_mid )
 	{
-		$db =& Database::getInstance() ;
+		$db = Database::getInstance() ;
 		$import_mid = intval( $import_mid ) ;
 
 		// get name of `contents` table 
@@ -181,7 +181,7 @@ if ( ! function_exists('d3diary_import_from_d3blog') ) {
 if ( ! function_exists('d3diary_import_trackbacks') ) {
 	function d3diary_import_trackbacks($mydirname , $from_dirname )
 	{
-		$db =& Database::getInstance();
+		$db = Database::getInstance();
 		$from_table = $db->prefix( $from_dirname.'_trackback' ) ;
 		$to_table = $db->prefix( $mydirname.'_trackback' ) ;
 
@@ -222,7 +222,7 @@ if ( ! function_exists('d3diary_import_trackbacks') ) {
 if ( ! function_exists('d3diary_import_comments') ) {
 	function d3diary_import_comments($to_mid , $from_mid )
 	{
-		$db =& Database::getInstance();
+		$db = Database::getInstance();
 		$table = $db->prefix( 'xoopscomments' ) ;
 	    	$sql = "UPDATE ".$table." SET com_modid=".intval($to_mid)." WHERE com_modid=".intval($from_mid);
 		$irs = $db->query( $sql ) ;
@@ -235,7 +235,7 @@ if ( ! function_exists('d3diary_import_comments') ) {
 if ( ! function_exists('d3diary_import_notifications') ) {
 	function d3diary_import_notifications($to_mid, $from_mid)
 	{
-		$db =& Database::getInstance();
+		$db = Database::getInstance();
 		$table = $db->prefix( 'xoopsnotifications' ) ;
 	    	$sql = "UPDATE ".$table." SET not_modid=".intval($to_mid)." WHERE not_modid=".intval($from_mid);
 		$irs = $db->query( $sql ) ;
@@ -246,7 +246,7 @@ if ( ! function_exists('d3diary_import_notifications') ) {
 if ( ! function_exists('d3diary_import_from_weblogD3') ) {
 	function d3diary_import_from_weblogD3( $mydirname , $import_mid )
 	{
-		$db =& Database::getInstance() ;
+		$db = Database::getInstance() ;
 		$import_mid = intval( $import_mid ) ;
 
 		// get name of `contents` table 

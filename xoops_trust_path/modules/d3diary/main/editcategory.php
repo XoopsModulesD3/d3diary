@@ -7,7 +7,7 @@
 include_once dirname( dirname(__FILE__) ).'/class/category.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$category =& D3diaryCategory::getInstance();
+$category = D3diaryCategory::getInstance();
 
 	global $xoopsUser ;
 	if (is_object( @$xoopsUser )){

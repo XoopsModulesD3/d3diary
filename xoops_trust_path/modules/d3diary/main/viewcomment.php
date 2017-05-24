@@ -6,7 +6,7 @@
 include_once dirname( dirname(__FILE__) ).'/class/category.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$category =& D3diaryCategory::getInstance();
+$category = D3diaryCategory::getInstance();
 //--------------------------------------------------------------------
 // GET Initial Valuses
 //--------------------------------------------------------------------
@@ -16,7 +16,7 @@ $yd_list=array(); $yd_com_key=""; $yd_monthnavi="";
 
 $req_uid = isset($_GET['req_uid']) ? (int)$_GET['req_uid'] : 0;
 
-$d3dConf =& D3diaryConf::getInstance($mydirname, $req_uid, "viewcomment");
+$d3dConf = D3diaryConf::getInstance($mydirname, $req_uid, "viewcomment");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mPerm =& $d3dConf->mPerm ;

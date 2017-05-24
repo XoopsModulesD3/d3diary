@@ -3,7 +3,7 @@
 function b_d3diary_list_show( $options ){
 
 	include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
-	$photo =& D3diaryPhoto::getInstance();
+	$photo = D3diaryPhoto::getInstance();
 
 	$mydirname = empty( $options[0] ) ? 'd3diary' : $options[0] ;
 	$max_entry = empty( $options[1] ) ? 10 : intval( $options[1] ) ;

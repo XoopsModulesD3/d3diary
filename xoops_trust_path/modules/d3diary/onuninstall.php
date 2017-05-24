@@ -13,7 +13,7 @@ function d3diary_onuninstall_base( $module , $mydirname )
 
 	require dirname(__FILE__).'/class/d3diaryConf.class.php';
 
-	$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "onuninstall");
+	$d3dConf = D3diaryConf::getInstance($mydirname, 0, "onuninstall");
 	$func =& $d3dConf->func;
 
 	// for Cube 2.1
@@ -25,7 +25,7 @@ function d3diary_onuninstall_base( $module , $mydirname )
 		if( ! is_array( $ret ) ) $ret = array() ;
 	}
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$mid = $module->getVar('mid') ;
 
 	// TABLES (loading mysql.sql)

@@ -17,7 +17,7 @@ $yd_list=array(); $yd_com_key=""; $yd_monthnavi="";
 
 $req_uid = isset($_GET['req_uid']) ? (int)$_GET['req_uid'] : 0;
 
-$d3dConf =& D3diaryConf::getInstance($mydirname, $req_uid, "edit");
+$d3dConf = D3diaryConf::getInstance($mydirname, $req_uid, "edit");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mPerm =& $d3dConf->mPerm ;
@@ -82,7 +82,7 @@ $yd_avaterurl = $func->get_user_avatar(array($d3dConf->dcfg->uid));
 $req_cid=intval($func->getpost_param('cid'));
 
 if($req_cid >0 ){
-	$category =& D3diaryCategory::getInstance();
+	$category = D3diaryCategory::getInstance();
 	$category->uid=$d3dConf->dcfg->uid;
 	$category->cid=$req_cid;
 	$category->readdb($mydirname);

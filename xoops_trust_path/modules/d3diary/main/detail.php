@@ -8,9 +8,9 @@ include_once dirname( dirname(__FILE__) ).'/class/category.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 
-$diary =& D3diaryDiary::getInstance();
-$category =& D3diaryCategory::getInstance();
-$photo =& D3diaryPhoto::getInstance();
+$diary = D3diaryDiary::getInstance();
+$category = D3diaryCategory::getInstance();
+$photo = D3diaryPhoto::getInstance();
 
 //--------------------------------------------------------------------
 // GET Initial Valuses

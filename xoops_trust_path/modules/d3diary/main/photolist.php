@@ -8,9 +8,9 @@ include_once dirname( dirname(__FILE__) ).'/class/category.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/d3diaryConf.class.php';
 include_once dirname( dirname(__FILE__) ).'/class/photo.class.php';
 
-$diaryObj =& D3diaryDiary::getInstance();
-$category =& D3diaryCategory::getInstance();
-$photoObj =& D3diaryPhoto::getInstance();
+$diaryObj = D3diaryDiary::getInstance();
+$category = D3diaryCategory::getInstance();
+$photoObj = D3diaryPhoto::getInstance();
 
 //--------------------------------------------------------------------
 // GET Initial Valuses
@@ -19,7 +19,7 @@ $photoObj =& D3diaryPhoto::getInstance();
 $myname = "photolist.php";
 $yd_list=array(); $yd_com_key=""; $yd_monthnavi="";
 
-$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "photolist");
+$d3dConf = D3diaryConf::getInstance($mydirname, 0, "photolist");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mPerm =& $d3dConf->mPerm ;

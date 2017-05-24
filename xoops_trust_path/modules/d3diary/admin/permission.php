@@ -8,7 +8,7 @@ $member_handler =& xoops_gethandler('member');
 $group_list =& $member_handler->getGroupList();
 
 
-$d3dConf =& d3diaryConf::getInstance($mydirname);
+$d3dConf = d3diaryConf::getInstance($mydirname);
 $d3dConf->set_mod_config(0,"admin");	// needs $dcfg
 
 $gperm_config = array(

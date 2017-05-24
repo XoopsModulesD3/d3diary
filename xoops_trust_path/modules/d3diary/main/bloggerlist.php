@@ -12,7 +12,7 @@ global $xoopsUser,$xoopsDB;
 
 	$constpref = '_MB_' . strtoupper( $mydirname ) ;
 
-$d3dConf =& D3diaryConf::getInstance($mydirname, 0, "bloggerlist");
+$d3dConf = D3diaryConf::getInstance($mydirname, 0, "bloggerlist");
 $func =& $d3dConf->func ;
 $myts =& $d3dConf->myts;
 $mod_config =& $d3dConf->mod_config ;

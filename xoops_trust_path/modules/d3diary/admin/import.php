@@ -4,7 +4,7 @@ require_once dirname( dirname(__FILE__) ).'/include/import_functions.php' ;
 
 // get importable modules list
 $module_handler =& xoops_gethandler( 'module' ) ;
-$modules =& $module_handler->getObjects() ;
+$modules = $module_handler->getObjects() ;
 $importable_modules = array() ;
 $comimportable_modules = array() ;
 $notifimportable_modules = array() ;
